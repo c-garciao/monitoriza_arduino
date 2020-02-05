@@ -1,16 +1,19 @@
-﻿import serial, time, os.path, subprocess
+﻿import serial, time, os.path, subprocess, webbrowser
 from tkinter import *
 from os import path
 raiz=Tk()
-raiz.title("Sensor DHT11")
+arduino = serial.Serial('COM7', 9600)
+archivo="log.txt"
+web="web.html"
+def abre_web():
+    webbrowser.open_new_tab(web)
+raiz.title("Sensores")
 raiz.geometry("240x240")
 raiz.resizable(False,False)
 texto1=Label(text="Humedad").grid(pady=5, row=0, column=0)
 texto2=Label(text="Temperatura").grid(pady=5, row=1, column=0)
-botonWeb=Button(text="Ver en web", command=subprocess.call([sys.executable,'web.html'])).grid(pady=5, row=2, column=2)
-arduino = serial.Serial('COM7', 9600)
-archivo="log.txt"
-web="web.html"
+botonWeb=Button(text="Ver en navegador", command=abre_web).grid(pady=5, row=2, column=2)
+
 if not os.path.exists(web):
     open(web, 'w').close()
 
@@ -29,11 +32,12 @@ def recoger_arduino():
     texto3=Label(text=humedad + '%').grid(pady=5, row=0, column=2)
     texto4=Label(text=temperatura + 'ºC').grid(pady=5, row=1, column=2)
     f = open(web,'w')
-    mensaje="""<head><meta http-equiv="refresh" content="1"/><title>Medidas</title></head><body><h1>Humedad:"""
+    mensaje="""<head><script type="text/javascript" src="funciones.js"></script><script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script><meta charset="UTF-8"></meta><title>Medidas</title></head><body><div id="contenedor"><h1>Humedad:"""
+	#<meta http-equiv="refresh" content="1"/>
     mensaje+=humedad
-    mensaje+="""</h1><br/><h1>Temperatura:"""
+    mensaje+="""&#37;</h1><h1>Temperatura:"""
     mensaje+=temperatura
-    mensaje+="""</body></html>"""
+    mensaje+="""&#186;C</div></body></html>"""
     f.write(mensaje)
     f.close
     raiz.after(1000, recoger_arduino)
