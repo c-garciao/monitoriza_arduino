@@ -23,7 +23,7 @@ El programa también muestra los resultados en un archivo html, el cual se actua
 - [ ] Mejorar el rendimiento de la interfaz gráfica
 - [ ] Añadir más lecturas
 - [ ] Limpiar el código
-- [ ] Finish my changes
+- [ ] Comunicación remota con el arduino
 
 ## Autor
 
