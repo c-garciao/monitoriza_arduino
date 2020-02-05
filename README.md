@@ -19,11 +19,11 @@ El programa también muestra los resultados en un archivo html, el cual se actua
 
 ## Tareas pendientes
 [x] ~~Actualizar de forma dinámica el contenedor~~
-[ ] Mejorar y añadir más contenido a la versión web
-[ ] Mejorar el rendimiento de la interfaz gráfica
-[ ] Añadir más lecturas
-[ ] Lipiar el código
-
+- [ ] Mejorar y añadir más contenido a la versión web
+- [ ] Mejorar el rendimiento de la interfaz gráfica
+- [ ] Añadir más lecturas
+- [ ] Limpiar el código
+- [ ] Finish my changes
 
 ## Autor
 
