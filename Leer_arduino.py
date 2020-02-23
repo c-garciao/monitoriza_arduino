@@ -1,7 +1,7 @@
 ﻿# -*- coding: utf-8 -*-
 #
 import serial, time
-arduino = serial.Serial('COM7', 9600)
+arduino = serial.Serial('COM6', 9600)
 time.sleep(2)
 while  True:
     datos = arduino.readline()
@@ -9,3 +9,6 @@ while  True:
     temperatura = datos.decode().split(';')[1]
     print ("Humedad " + humedad + "%")
     print ("Temperatura: " + temperatura +" ºC")
+    f=open('./datos.txt','wb')
+    f.write(datos)
+    f.close
