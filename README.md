@@ -13,7 +13,7 @@ Monitorización de múltiple parámetros (una sala pequeña de servidores casera
 ## Funcionamiento
 Una vez instaladas las librerías necesarias, se debe ejecutar _Leer_arduino.py_ o _Leer_arduino.pyw_, dependiendo si se trata de consola o interfaz gráfica respectivamente.
 ### Interfaz Web
-El programa también muestra los resultados en un archivo html, el cual se actualiza dinámicamente gracias a un script escrito en _JQuery_:
+~~El programa también muestra los resultados en un archivo html, el cual se actualiza dinámicamente gracias a un script escrito en _JQuery_~~ El programa muestra los resultados en un archivo html y los actualiza de manera dinámica, mediante _JavaScript_ (JQuery), ya que los datos del arduino son volcados a un fichero:
 
 ![Captura_arduino](https://user-images.githubusercontent.com/51420640/73871014-51c88980-484d-11ea-8397-5d0f4bb54e64.PNG)
 
