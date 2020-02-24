@@ -1,5 +1,5 @@
-# Proyecto monitorización sala de servidores
-Monitorización de múltiple parámetros en una sala pequeña de servidores (casera en este caso). El proyecto pretende recoger, procesar y mostrar la información obtenida. Además, dicha información será tratada (notificar en caso de mediciones altas, etc).
+# Proyecto monitorización sensores
+Monitorización de múltiple parámetros (una sala pequeña de servidores casera en este caso) mediante diversos sensores conectados a una placa arduino. El proyecto pretende recoger, procesar y mostrar la información obtenida. Además, dicha información será tratada (notificar en caso de mediciones altas, etc).
 
 ## Herramientas necesarias
 
